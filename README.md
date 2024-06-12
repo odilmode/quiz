@@ -27,7 +27,9 @@ USE myDB;
 CREATE TABLE users (
     users_id VARCHAR(255) NOT NULL,
     users_password VARCHAR(255) NOT NULL,
-    user_type VARCHAR(50) NOT NULL,
+    users_score INT,
+    users_percentage INT,
+    user_type ENUM('admin', 'user')
     PRIMARY KEY (users_id)
 );
 
@@ -39,7 +41,14 @@ CREATE TABLE questions (
     option3 VARCHAR(255) NOT NULL,
     option4 VARCHAR(255) NOT NULL,
     answer VARCHAR(255) NOT NULL,
-    PRIMARY KEY (question_id)
+    PRIMARY KEY (id)
+);
+CREATE TABLE user_scores (
+    score_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(100),
+    score INT,
+    percentage INT,
+    attempt_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO users (users_id, users_password, user_type) VALUES ('admin', 'java', 'admin');
