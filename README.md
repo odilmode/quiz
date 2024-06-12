@@ -5,7 +5,7 @@ This is a Java-based quiz application using MySQL for data storage.
 ## Prerequisites
 
 - Java Development Kit (JDK) 11 or higher
-- IntelliJ IDEA
+- IntelliJ IDEA or Eclipse
 - MySQL
 
 ## Installation
@@ -29,7 +29,7 @@ CREATE TABLE users (
     users_password VARCHAR(255) NOT NULL,
     users_score INT,
     users_percentage INT,
-    user_type ENUM('admin', 'user')
+    user_type ENUM('admin', 'user') DEFAULT 'user',
     PRIMARY KEY (users_id)
 );
 
@@ -54,10 +54,11 @@ CREATE TABLE user_scores (
 INSERT INTO users (users_id, users_password, user_type) VALUES ('admin', 'java', 'admin');
 
 ```
-### 3.Open the Project in IntelliJ IDEA
-Open IntelliJ IDEA.
+### 3.Open the Project in IntelliJ IDEA or Eclipse
+Open IntelliJ IDEA or Eclipse.
 Go to File > Open and select the cloned repository folder.
-Ensure the project SDK is set to JDK 11 or higher (File > Project Structure). 
+Ensure the project SDK is set to JDK 11 or higher (File > Project Structure).
+If JDK is lower, download and set JDK to JDK 22 version
 ### 4.Configure Database Connection
    Open ConnectSQL.java.
    Ensure the database connection details are correct:
