@@ -56,7 +56,7 @@ INSERT INTO users (users_id, users_password, user_type) VALUES ('admin', 'java',
 ```
 ### 3.Open the Project in IntelliJ IDEA or Eclipse
 Open IntelliJ IDEA or Eclipse.
-Go to File > Open and select the cloned repository folder.
+Go to File > Open and select the cloned repository folder.If you are using Eclipse make sure to clone the repository to our working place.
 Ensure the project SDK is set to JDK 11 or higher (File > Project Structure).
 If JDK is lower, download and set JDK to JDK 22 version
 ### 4.Configure Database Connection
