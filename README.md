@@ -82,3 +82,6 @@ Using the Application
 Login Page: Log in with the admin credentials (admin, java).
 Admin Panel: Manage questions and users.
 User Registration: New users can sign up through the sign-up page.
+
+### 6. Simple In Use Example
+https://youtu.be/CLghJdzgfog
